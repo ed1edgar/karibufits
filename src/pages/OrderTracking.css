@@ -1,0 +1,119 @@
+/* OrderTracking.css */
+.tracking-container {
+    max-width: 800px;
+    margin: var(--spacing-3xl) auto;
+    padding: 0 var(--spacing-md);
+}
+
+.tracking-header {
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.tracking-header h1 {
+    font-family: var(--font-family-serif);
+    margin-bottom: var(--spacing-md);
+}
+
+.tracking-search {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto var(--spacing-3xl);
+    gap: var(--spacing-sm);
+}
+
+.tracking-input {
+    flex: 1;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.tracking-btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0 var(--spacing-xl);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tracking-result {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    animation: fadeUp 0.5s ease-out;
+}
+
+.order-meta {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    gap: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    /* Half of icon width roughly */
+    top: 40px;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-icon {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    z-index: 1;
+    transition: all var(--transition-normal);
+}
+
+.timeline-item.completed .timeline-icon,
+.timeline-item.current .timeline-icon {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.timeline-content h4 {
+    margin-bottom: 4px;
+}
+
+.timeline-content p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.timeline-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: 4px;
+}
