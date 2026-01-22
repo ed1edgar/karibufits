@@ -6,6 +6,7 @@ import ProductDetails from './pages/ProductDetails';
 import Checkout from './pages/Checkout';
 import CategoryPage from './pages/CategoryPage';
 import OrderTracking from './pages/OrderTracking';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/track-order" element={<OrderTracking />} />
         <Route path="/category/:category" element={<CategoryPage />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Layout>
   );

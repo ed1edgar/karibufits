@@ -26,14 +26,14 @@ const Home = () => {
                 </div>
                 <div className="category-grid">
                     <Link to="/category/women" className="category-card">
-                        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=800&auto=format&fit=crop" alt="Women" className="category-img" />
+                        <img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?q=80&w=800&auto=format&fit=crop" alt="Women" className="category-img" />
                         <div className="category-overlay">
                             <h3>Women</h3>
                             <span className="category-btn">Explore <ArrowRight /></span>
                         </div>
                     </Link>
                     <Link to="/category/men" className="category-card">
-                        <img src="https://images.unsplash.com/photo-1617137968427-b2e4231b7264?q=80&w=800&auto=format&fit=crop" alt="Men" className="category-img" />
+                        <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=800&auto=format&fit=crop" alt="Men" className="category-img" />
                         <div className="category-overlay">
                             <h3>Men</h3>
                             <span className="category-btn">Explore <ArrowRight /></span>

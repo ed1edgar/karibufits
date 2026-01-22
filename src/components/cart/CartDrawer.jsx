@@ -11,7 +11,8 @@ const CartDrawer = () => {
         cartItems,
         updateQuantity,
         removeFromCart,
-        cartTotal
+        cartTotal,
+        clearCart
     } = useCart();
 
     if (!isCartOpen) {
@@ -24,9 +25,24 @@ const CartDrawer = () => {
             <div className="cart-drawer" onClick={e => e.stopPropagation()}>
                 <div className="cart-header">
                     <h2>Your Bag ({cartItems.length})</h2>
-                    <button className="close-btn" onClick={() => setIsCartOpen(false)}>
-                        <X />
-                    </button>
+                    <div className="cart-header-actions">
+                        {cartItems.length > 0 && (
+                            <button 
+                                className="clear-cart-btn" 
+                                onClick={() => {
+                                    if (window.confirm('Are you sure you want to clear your entire bag?')) {
+                                        clearCart();
+                                    }
+                                }}
+                                aria-label="Clear cart"
+                            >
+                                Clear All
+                            </button>
+                        )}
+                        <button className="close-btn" onClick={() => setIsCartOpen(false)}>
+                            <X />
+                        </button>
+                    </div>
                 </div>
 
                 <div className="cart-items">

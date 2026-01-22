@@ -2,6 +2,8 @@
 .category-page {
     padding-top: var(--spacing-2xl);
     padding-bottom: var(--spacing-3xl);
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
 }
 
 .category-header {
@@ -83,6 +85,16 @@
     border-radius: var(--radius-md);
 }
 
+@media (max-width: 1200px) {
+    .category-layout {
+        gap: var(--spacing-2xl);
+    }
+    
+    .filters-sidebar {
+        width: 200px;
+    }
+}
+
 @media (max-width: 900px) {
     .category-layout {
         grid-template-columns: 1fr;
@@ -91,5 +103,86 @@
     .filters-sidebar {
         display: none;
         /* Hide for mobile for now or implement drawer */
+    }
+    
+    .category-title {
+        font-size: calc(var(--font-size-3xl) * 0.9);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-page {
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-2xl);
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+    
+    .category-header {
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .category-title {
+        font-size: calc(var(--font-size-3xl) * 0.8);
+    }
+    
+    .category-count {
+        font-size: var(--font-size-sm);
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-page {
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-xl);
+        padding-left: var(--spacing-xs);
+        padding-right: var(--spacing-xs);
+    }
+    
+    .category-header {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .category-title {
+        font-size: calc(var(--font-size-3xl) * 0.7);
+    }
+    
+    .category-count {
+        font-size: var(--font-size-xs);
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .no-products {
+        padding: var(--spacing-xl);
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 360px) {
+    .category-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    .category-title {
+        font-size: calc(var(--font-size-3xl) * 0.6);
+    }
+    
+    .product-grid {
+        gap: var(--spacing-sm);
+    }
+    
+    .no-products {
+        padding: var(--spacing-lg);
+        font-size: var(--font-size-xs);
     }
 }
